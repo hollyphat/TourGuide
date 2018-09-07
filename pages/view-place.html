@@ -84,7 +84,7 @@
                 });
 
 
-                $("body").on("click",".popup-link",function(e){
+                $("body").off('click', '.popup-link').on('click', '.popup-link',function(e) {
                     e.preventDefault();
                     var src = "<img src='"+$(this).attr("href")+"' class='img-responsive'>";
                     app.dialog.alert(src);

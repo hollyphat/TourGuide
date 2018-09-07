@@ -83,7 +83,7 @@
 
                 
 
-                $(".logout").on("click",function(){
+                $("body").off('click', '.logout').on('click', '.logout',function(e) {
                     app.dialog.confirm('Are you sure you want to logout?', function () {
                         sessionStorage.removeItem("user_id");
                         sessionStorage.removeItem("hotels");
@@ -94,7 +94,7 @@
                         sessionStorage.removeItem("gender");
                         sessionStorage.removeItem("saved_places");
                         sessionStorage.removeItem("saved_hotels");
-                        
+                        app.view.main.history.pop();
                         mainView.router.navigate("/",{});
                     });
                 });

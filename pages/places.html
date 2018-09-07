@@ -63,7 +63,7 @@
                     return;
                 }
 
-                $(".logout").on("click",function(){
+                /*$(".logout").on("click",function(){
                     app.dialog.confirm('Are you sure you want to logout?', function () {
                         sessionStorage.removeItem("user_id");
                         sessionStorage.removeItem("hotels");
@@ -77,7 +77,24 @@
                         
                         mainView.router.navigate("/",{});
                     });
+                });*/
+
+                $("body").off('click', '.logout').on('click', '.logout',function(e) {
+                    app.dialog.confirm('Are you sure you want to logout?', function () {
+                        sessionStorage.removeItem("user_id");
+                        sessionStorage.removeItem("hotels");
+                        sessionStorage.removeItem("places");
+                        sessionStorage.removeItem("name");
+                        sessionStorage.removeItem("email");
+                        sessionStorage.removeItem("phone");
+                        sessionStorage.removeItem("gender");
+                        sessionStorage.removeItem("saved_places");
+                        sessionStorage.removeItem("saved_hotels");
+                        app.view.main.history.pop();
+                        mainView.router.navigate("/",{});
+                    });
                 });
+
 
 
                 
