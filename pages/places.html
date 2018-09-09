@@ -2,45 +2,26 @@
     <div class="page" data-name="saved">        
         <div class="navbar">
             <div class="navbar-inner">
-                <div class="left">
-                    <a href="#" class="link icon-only panel-open" data-panel="left">
-                        <i class="icon f7-icons ios-only">menu</i>
-                        <i class="icon material-icons md-only">menu</i>
-                      </a>
+                <div class="left sliding">
+                    <a href="#" class="link back">
+                        <i class="icon icon-back"></i>
+                        <span class="ios-only">Back</span>
+                    </a>
                 </div>
-                <div class="title">Places</div>
-                <div class="right">                        
-                        <a class="link icon-only searchbar-enable" data-searchbar=".searchbar-demo">
-                            <i class="icon f7-icons ios-only">search_strong</i>
-                            <i class="icon material-icons md-only">search</i>
-                        </a>
-                </div>
-                
-                
-                <form data-search-container=".search-list" data-search-in=".item-title" class="searchbar searchbar-expandable searchbar-demo searchbar-init">
-                    <div class="searchbar-inner">
-                        <div class="searchbar-input-wrap">
-                            <input type="search" placeholder="Search Places" />
-                            <i class="searchbar-icon"></i>
-                            <span class="input-clear-button"></span>
-                        </div>
-                        <span class="searchbar-disable-button">Cancel</span>
-                    </div>
-                </form>        
+                <div class="title">Tourist Centers</div>                      
         </div>
 
         
       </div>
         <div class="page-content">            
-            <div class="searchbar-backdrop"></div>
-                <div class="list simple-list searchbar-not-found">
-                    <ul>
-                        <li>Nothing found</li>
-                    </ul>
-                </div>
-                <div class="list search-list searchbar-found list media-list all-herb-lists">
+                <div class="block-title">
+                    Tourist Centers
+                </div>             
+                <div class="padding">
+                    <div class="row all-center-lists">
 
-                </div>
+                    </div>
+                </div> 
         </div>
 
         
@@ -102,27 +83,33 @@
                 var herbs = JSON.parse(herb);
                 //console.log(herbs[0].image);
                 //herbs = JSON.parse(herbs);
-                var htmls = "<ul>";
+                var htmls = "";
                                             
                 for(var i = 0; i < herbs.length; i++){
                     var user_name = herbs[i].name;
                     var id = herbs[i].id;
                     var img = base_url+"/admin/img/places/"+herbs[i].image;
                     //console.log(img);
-                    htmls += '<li>';
+                    /*htmls += '<li>';
                     htmls += '<a href="/view-place/?name='+user_name+'&id='+id+'&image='+img+'" class="item-link item-content">';
                     htmls += '<div class="item-media"><img src="'+img+'" width="90" alt="Image"></div>'
                     htmls += '<div class="item-inner">';
                     htmls += '<div class="item-title">'+herbs[i].name+'</div>';
                     htmls += '<div class="item-after"><i class="material-icons icon">location_on</i>'+herbs[i].town+'</div></div>';
-                    htmls += '</div></div></a></li>';
+                    htmls += '</div></div></a></li>';*/
+
+
+                    htmls += '<div class="col-50">';
+                    htmls += '<div class="book-div"><div class="book-bg" style="background-image: url('+img+');"></div>';
+                    htmls += '<div class="book-title">';
+                    htmls += '<a href="/view-place/?name='+user_name+'&id='+id+'&image='+img+'">'+user_name+'</a><br><i class="material-icons icon">location_on</i> '+herbs[i].town+'</div></div></div>';
                 }
 
-                htmls += "</ul>";
+                //htmls += "</ul>";
 
                 //console.log(htmls);
 
-                $(".all-herb-lists").html(htmls);
+                $(".all-center-lists").html(htmls);
 
 
                 

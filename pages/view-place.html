@@ -14,27 +14,24 @@
     <div class="page-content">
         <div class="bg-res" style="background-image: url({{$route.query.image}});">
             &nbsp;
-        </div>
-        <div class="block">
-            <h3>{{$route.query.name}}</h3>
-        </div>
+        </div>        
 
         
-        <div class="card card-outlines hide result">
+        <div class="card card-outline hide result">
             <div class="card-header">
                 About
             </div>
             <div class="card-content card-content-padding" id="place-info">
             </div>
             <div class="card-footer">
-                <a href="" class="button" id="save-place" style="display: none;">Save Place</a>
-                <a href="" class="button" id="remove-place" style="display: none;">Remove From Saved Places</a>
+                <a href="" class="button" id="save-place" style="display: none;">Add to favourites Place</a>
+                <a href="" class="button" id="remove-place" style="display: none;">Remove from favourites Places</a>
             </div>
         </div>
 
 
         <div class="card card-outline result hide">
-            <div class="card-header">Images</div>
+            <div class="card-header">Center Images</div>
             <div class="card-content card-content-padding">
                 <div class="gallery-block popup-gallery">
 
@@ -95,7 +92,7 @@
                 $("body").on("click","#save-place",function(e){
 
                     app.toast.create({
-                        text: 'Please wait',
+                        text: 'Adding to favourites lists',
                         position: 'bottom',
                         closeTimeout: 3000
                     }).open();
@@ -112,7 +109,7 @@
                         timeout: 30000,
                         success: function(f){
                             app.toast.create({
-                                text: 'Place added to save place lists',
+                                text: 'Center added to favourites lists',
                                 position: 'bottom',
                                 closeTimeout: 3000
                             }).open();
@@ -135,7 +132,7 @@
 
                 $("body").on("click","#remove-place",function(e){
                     app.toast.create({
-                        text: 'Please wait',
+                        text: 'Removing from favourites lists',
                         position: 'bottom',
                         closeTimeout: 3000
                     }).open();
@@ -152,7 +149,7 @@
                         timeout: 30000,
                         success: function(f){
                             app.toast.create({
-                                text: 'Place removed from save place lists',
+                                text: 'Center removed from favourites lists',
                                 position: 'bottom',
                                 closeTimeout: 3000
                             }).open();
