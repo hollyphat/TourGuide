@@ -288,6 +288,8 @@ code {
   height: 200px;
   background-position: center;
   padding-top: 125px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 
@@ -310,4 +312,34 @@ code {
   height: 150px;
   /*border: #2196f3 solid 1px;*/
   padding: 10px;
+}
+
+.book-div{
+  height: 210px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: #f1f1f1 0 0 4px;
+  border: #d0d0d0 solid 1px;
+}
+
+.book-div .book-bg{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;  
+  background-attachment:fixed !important;
+  overflow:hidden;
+  height: 150px;
+}
+
+.book-div .book-title a{
+  /*color: #000;*/
+}
+
+
+.book-res-bg{
+  position: relative;
+  height: 200px;
+  margin-bottom: 50px;
 }
