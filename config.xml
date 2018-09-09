@@ -3,13 +3,13 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "ng.com.onlinemedia.tourguide"
+        id        = "ng.com.onlinemedia.touristguide"
         version   = "1.0.2">
 
-    <name>Tour Guide</name>
+    <name>Tourist Guide</name>
 
     <description>
-        Mobile Tour Guide
+        Mobile Tourist Guide
     </description>
 
     <author href="http://onlinemedia.com.ng" email="admin@onlinemedia.com.ng">
