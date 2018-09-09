@@ -1,4 +1,4 @@
-const app_name = "Tour Guide";
+const app_name = "Osun Tour Guide";
 var developer_url = "https://onlinemedia.com.ng";
 var developer_email = "admin@onlinemedia.com.ng";
 var supervisor = "OnlineMedia";
@@ -13,14 +13,14 @@ env = "locals";
 var base_url;
 
 if(env == "local"){
-    url = "http://project.apps/TourGuide/api.php";
-    base_url = "http://project.apps/TourGuide";
+    url = "http://project.apps/OsunTourist/api.php";
+    base_url = "http://project.apps/OsunTourist";
     server_upload_url = "http://project.apps/cdn/";
 
 }else{
-    base_url = "https://projects.onlinemedia.com.ng/TourGuide";
-    url = 'https://projects.onlinemedia.com.ng/TourGuide/api.php';
+    base_url = "https://projects.onlinemedia.com.ng/OsunTourist";
+    url = 'https://projects.onlinemedia.com.ng/OsunTourist/api.php';
     server_upload_url = "https://cdn.uwansell.com.ng/apps/";
 }
 
-app_path = "TourGuide/";
+app_path = "OsunTourist/";
